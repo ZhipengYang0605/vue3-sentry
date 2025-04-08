@@ -1,6 +1,7 @@
 import { sentryVitePlugin } from "@sentry/vite-plugin";
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,6 +11,13 @@ export default defineConfig({
   })],
 
   build: {
-    sourcemap: true
+    sourcemap: true,
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '~': path.resolve(__dirname, './src/assets'),
+      // 更多别名...
+    }
   }
 })

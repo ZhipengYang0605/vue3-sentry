@@ -3,5 +3,12 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"] // 必须与vite的alias配置匹配
+      },
+      "types": ["node"] // 确保包含node类型
+    }
 }
