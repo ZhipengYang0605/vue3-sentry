@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+
+
+a = 2
 </script>
 
 <template>
