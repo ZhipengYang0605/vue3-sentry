@@ -10,7 +10,8 @@ Sentry.init({
   app,
   dsn: "https://a826983ab5caf49453b51df91bde0348@o4509115183202304.ingest.us.sentry.io/4509115192246272",
   integrations: [
-    Sentry.replayIntegration()
+    Sentry.replayIntegration(),
+    Sentry.browserTracingIntegration({ router }),
   ],
   // Session Replay
   replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
